@@ -1,10 +1,13 @@
 ### [Optional] seed the database
-Use [seed_database.sql](.devcontainer/seed_database.sql) to seed the dev database.
+Use [seed_database.sql](.devcontainer/initdb.d/seed_database.sql) to seed the dev database.
 
 To validate use ```psql -h db -U $PGUSER``` to connect to db.
 
 ### Setup instructions
-1. Load the devcontainer
+0. [Optional] Setup claude code using ```claude``` command
+1. Load the containers
+  a. Load the devcontainer
+  or, b. use docker compose ```docker compose up --build --force-recreate -d```
 
 ### create the react app in the container
 ```zsh
