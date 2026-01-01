@@ -8,13 +8,15 @@ services:
 
     volumes:
       - ../..:/workspaces:cached
+      - ~/.claude:/home/vscode/.claude:cached
+      - ~/.claude.json:/home/vscode/.claude.json:cached
 
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
 
     # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
     network_mode: service:db
-    
+
     # Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
     # user: root
 
@@ -26,11 +28,12 @@ services:
     container_name: db
     restart: unless-stopped
     volumes:
-      - ./seed_database.sql:/docker-entrypoint-initdb.d/seed_database.sql
+      - ./initdb.d/:/docker-entrypoint-initdb.d/
+      - ./db_data/:/var/lib/postgresql/data/
     env_file:
       - .postgres.env
 
-      
+
     # Add "forwardPorts": ["5432"] to **devcontainer.json** to forward PostgreSQL locally.
     # (Adding the "ports" property to this file will not forward from a Codespace.)
 

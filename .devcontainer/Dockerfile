@@ -1,8 +1,13 @@
 FROM mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm
 
 # [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
+ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+     && apt-get -y install --no-install-recommends \
+     nodejs \
+     npm
+
+# Install some global npm packages
+RUN npm install -g @anthropic-ai/claude-code
 
 # pull the latest nvim. This is a workaround for debian's nvim being too old.
 # TODO: can this be turned into a devcontainer feature?
