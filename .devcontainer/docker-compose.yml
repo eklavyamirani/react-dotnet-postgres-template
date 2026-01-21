@@ -48,8 +48,6 @@ services:
       - internal
 
 networks:
-  default:
-    driver: bridge
   internal:
     driver: bridge
     internal: true
