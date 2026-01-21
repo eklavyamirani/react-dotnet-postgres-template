@@ -11,7 +11,9 @@
 		"ghcr.io/devcontainers/features/dotnet:2": {},
 		"ghcr.io/devcontainers/features/node:1": {},
 		"ghcr.io/devcontainers-community/npm-features/typescript:1": {},
-		"ghcr.io/itsmechlark/features/postgresql:1": {}
+		"ghcr.io/itsmechlark/features/postgresql:1": {},
+        "ghcr.io/devcontainers/features/copilot-cli:1": {},
+        "ghcr.io/stu-bell/devcontainer-features/claude-code:0": {},
     },
 
 	// Configure tool-specific properties.
@@ -28,7 +30,9 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "GitHub.copilot-chat"
+                "GitHub.copilot-chat",
+                "anthropic.claude-code",
+                "openai.chatgpt"
             ]
         }
     }

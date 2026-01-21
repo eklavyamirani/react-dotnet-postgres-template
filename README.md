@@ -9,7 +9,7 @@ To validate use ```psql -h db -U $PGUSER``` to connect to db.
 ### Project Setup instructions
 1. Load the containers
     a. Load the devcontainer
-    b. (or) use docker compose ```docker compose up --build --force-recreate -d```
+    b. (or) use docker compose ```docker compose -f docker-compose.yml -f docker-compose.local.yml up --build --force-recreate -d```
 
 2. [Optional] Setup claude code using ```claude``` command
 
