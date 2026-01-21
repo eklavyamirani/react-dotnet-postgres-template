@@ -2,6 +2,7 @@
 -- PostgreSQL database dump
 --
 
+-- leaving it here for reference
 -- Dumped from database version 16.8 (Debian 16.8-1.pgdg120+1)
 -- Dumped by pg_dump version 16.8 (Debian 16.8-1.pgdg120+1)
 
@@ -21,7 +22,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: bookmarks; Type: TABLE; Schema: public; Owner: your_username
+-- Name: bookmarks; Type: TABLE; Schema: public;
 --
 
 CREATE TABLE public.bookmarks (
@@ -33,8 +34,6 @@ CREATE TABLE public.bookmarks (
     title character varying(255)
 );
 
-
-ALTER TABLE public.bookmarks OWNER TO "your_username";
 
 --
 -- PostgreSQL database dump complete
