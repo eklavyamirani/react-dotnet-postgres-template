@@ -24,7 +24,7 @@
         5432 // PostgreSQL default port
     ],
     "postCreateCommand": "dotnet tool install --global dotnet-ef",
-    "initializeCommand": ".devcontainer/initenv.sh",
+    "initializeCommand": "make -C .devcontainer init",
     "customizations": {
         "vscode": {
             "extensions": [

@@ -3,7 +3,10 @@ Use [seed_database.sql](.devcontainer/initdb.d/seed_database.sql) to seed the de
 
 To validate use ```psql -h db -U $PGUSER``` to connect to db.
 
-### Setup instructions
+### Run the first time setup (automatic for devcontainer, only required for manual setup)
+```make -C .devcontainer makefile```
+
+### Project Setup instructions
 1. Load the containers
   a. Load the devcontainer
   or, b. use docker compose ```docker compose up --build --force-recreate -d```
