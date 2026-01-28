@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm as base
+FROM mcr.microsoft.com/devcontainers/dotnet:1.5.5-8.0-bookworm as base
 
 # install additional OS packages.
  RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
