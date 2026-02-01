@@ -17,7 +17,7 @@ FROM base as devcontainer
 FROM base as localdev
 
 # Install some global npm packages
-RUN npm install -g @anthropic-ai/claude-code
+RUN npm install -g @anthropic-ai/claude-code @github/copilot@prerelease
 
 # pull the latest nvim. This is a workaround for debian's nvim being too old.
 # TODO: can this be turned into a devcontainer feature?
